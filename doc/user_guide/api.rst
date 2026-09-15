@@ -45,6 +45,7 @@ Encoding Channels
    ColorDatum
    ColorValue
    Column
+   DatumChannelMixin
    Description
    DescriptionValue
    Detail
@@ -112,6 +113,7 @@ Encoding Channels
    TooltipValue
    Url
    UrlValue
+   ValueChannelMixin
    X
    X2
    X2Datum

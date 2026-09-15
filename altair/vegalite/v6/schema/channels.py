@@ -245,7 +245,7 @@ class ValueChannelMixin(core.SchemaBase):
         )
 
 
-class DatumChannelMixin:
+class DatumChannelMixin(core.SchemaBase):
     _encoding_name: str
 
     def to_dict(
@@ -256,9 +256,9 @@ class DatumChannelMixin:
     ) -> dict:
         context = context or {}
         ignore = ignore or []
-        datum = self._get("datum", Undefined)  # type: ignore # noqa
+        datum = self._get("datum", Undefined)  # noqa
         copy = self  # don't copy unless we need to
-        return super(DatumChannelMixin, copy).to_dict(  # ty: ignore
+        return super(DatumChannelMixin, copy).to_dict(
             validate=validate, ignore=ignore, context=context
         )
 
